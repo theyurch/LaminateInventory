@@ -1,0 +1,51 @@
+
+<%= form_for @laminate, url: new_lam_path do |f| %>
+  <div>
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+  <div>
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div>
+    <%= f.label :grade %>
+    <%= f.text_field :grade %>
+  </div>
+  <div>
+    <%= f.label :bin %>
+    <%= f.text_field :bin %>
+  </div>
+  <div>
+    <%= f.label :job %>
+    <%= f.text_field :job %>
+  </div>
+  <div>
+    <%= f.label :note %>
+    <%= f.text_field :note %>
+  </div>
+  <div>
+    <%= f.label :size1 %>
+    <%= f.text_field :size1 %>
+  </div>
+  <div>
+    <%= f.label :size2 %>
+    <%= f.text_field :size2 %>
+  </div>
+
+
+  <%= f.submit 'Create' %>
+<% end %>
+
+<!-- 
+# color:string 
+# manufacturer:string 
+# grade:string 
+# bin:string 
+# job:string 
+# note:string 
+# size1:integer 
+# size2:integer
+ -->
+<!-- # quantity, user, color descriptions,
+ -->

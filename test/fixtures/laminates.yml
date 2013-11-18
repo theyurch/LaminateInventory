@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  color: MyString
+  manufacturer: MyString
+  grade: MyString
+  bin: MyString
+  job: MyString
+  note: MyString
+  size1: 1
+  size2: 1
+
+two:
+  color: MyString
+  manufacturer: MyString
+  grade: MyString
+  bin: MyString
+  job: MyString
+  note: MyString
+  size1: 1
+  size2: 1

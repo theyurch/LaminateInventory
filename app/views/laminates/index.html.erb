@@ -1,0 +1,40 @@
+<%= link_to "new lam", new_lam_path %>
+<br>
+<table class="table">
+<tr>
+<th><%= link_to "Color", :sort => "color" %></th>
+<th><%= link_to "Manufacturer", :sort => "manufacturer"  %></th>
+<th>Grade</th>
+<th>Bin</th>
+<th>Job</th>
+<th>Note</th>
+<th>Size1</th>
+<th>Size2</th>
+</tr>
+
+<% @laminates.each do |o| %>
+	<tr>
+	<td><%= o.color %></td>
+	<td><%= o.manufacturer %></td>
+	<td><%= o.grade %></td>
+	<td><%= o.bin %></td>
+	<td><%= o.job %></td>
+	<td><%= o.note %></td>
+	<td><%= o.size1 %></td>
+	<td><%= o.size2 %></td>
+	<td><%= link_to "=>", edit_lam_path(o) %></td>
+	</tr>
+<% end %>
+</table>
+<!-- 
+# color:string 
+# manufacturer:string 
+# grade:string 
+# bin:string 
+# job:string 
+# note:string 
+# size1:integer 
+# size2:integer
+
+# quantity, user, color descriptions,
+ -->

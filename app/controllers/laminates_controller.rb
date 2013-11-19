@@ -1,10 +1,23 @@
 class LaminatesController < ApplicationController
 
+
+# needs:
+# -sortable and filterable main table
+# -(additonal?) search functionality
+# -remove case sensitivity
+# -enforceable data uniformity?
+# -user tracking
+# 	-not a strict logon
+# -javascript styled "opening" slideout rather than new page for editing
+# -grouping or numeric counts
+# -large scale data migration from existing
+
 	def index
 		# @laminates = Laminate.all
 		# @laminates = Laminate.order(sort_column + " " + sort_direction)
 		@laminates = Laminate.order(params[:sort])
 		# dangerous - sanitize the input somehow
+
 	end
 
 	def new

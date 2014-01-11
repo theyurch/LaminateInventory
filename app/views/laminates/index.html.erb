@@ -5,7 +5,7 @@
 <th><%= link_to "Color", :sort => "color" %></th>
 <th><%= link_to "Manufacturer", :sort => "manufacturer"  %></th>
 <th><%= link_to "Grade", :sort => "grade" %></th>
-<th>Bin</th>
+<th><%= link_to "Bin", :sort => "bin" %></th>
 <th>Job</th>
 <th>Note</th>
 <th>Size1</th>
@@ -22,10 +22,15 @@
 	<td><%= o.note %></td>
 	<td><%= o.size1 %></td>
 	<td><%= o.size2 %></td>
-	<td><%= link_to "=>", edit_lam_path(o) %></td>
+	<td><%= link_to "=>", edit_laminate_path(o) %></td>
 	</tr>
 <% end %>
 </table>
+
+
+<%= paginate @laminates %>
+
+<p>Past History:</p>
 
 <% @laminates.each do |v| %>
 	<% v.versions.each do |change| %>
@@ -45,8 +50,8 @@
 			<td><%= v.note %></td>
 			<td><%= v.size1 %></td>
 			<td><%= v.size2 %></td>
-			<td></td>
-			<% if o %>		
+			<% if o %>
+				
 				<td>From:</td>
 				<td><%= o.color %></td>
 				<td><%= o.manufacturer %></td>
@@ -56,11 +61,13 @@
 				<td><%= o.note %></td>
 				<td><%= o.size1 %></td>
 				<td><%= o.size2 %></td>
-				</tr>
+				
 			<% end %>
+			</tr>
 		</table>
 	<% end %>
 <% end %>
+
 <!-- 
 # color:string 
 # manufacturer:string 

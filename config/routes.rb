@@ -1,9 +1,9 @@
 LaminateInventory::Application.routes.draw do
 
-  # resources :laminate
-  get '/laminates/:id/' => 'laminates#edit', as: 'edit_lam'
-  post '/laminates/:id/' => 'laminates#update'
- 
+  resources :laminates
+  # get '/laminates/:id/' => 'laminates#edit', as: 'edit_lam'
+  # post '/laminates/:id/' => 'laminates#update'
+  # post '/laminates/:id/' => 'laminates#destroy', as: 'delete_laminate'
 
   root :to => 'laminates#index'
 

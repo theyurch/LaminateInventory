@@ -1,5 +1,5 @@
 
-<%= form_for @laminate, url: edit_lam_path(@laminate), method: 'post' do |f| %>
+<%= form_for @laminate, url: laminate_path(@laminate) do |f| %>
   <div>
     <%= f.label :color %>
     <%= f.text_field :color %>
@@ -36,3 +36,6 @@
 
   <%= f.submit 'Edit' %>
 <% end %>
+
+ <%= link_to 'Destroy', laminate_path(@laminate), method: 'delete', data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+ <%# link_to "delete", [:delete, @laminate], :method => :delete %>

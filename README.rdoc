@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby 2.0
+Rails 4
+Postgresql
+developed in a win8 enviroment
 
-Things you may want to cover:
+This rails app is intended to be used as a replacement for Carefree Industries' existing laminate database, which is currently just an access database with a custom interface.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Users need to be able to search for availability and modify laminates. Laminate history (moves, changes, additions) has a rudimentary tracking that needs to be extended further, mainly per-user.
